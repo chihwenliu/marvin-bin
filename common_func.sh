@@ -24,4 +24,9 @@ function dbg_msg(){
   [ ! -z $dbg_enabled ] && [ $dbg_enabled -eq 1 ] && echo -e "${YELLOW} ${1} ${NC}"
 }
 
+function pause(){
+   # restat until any key is pressed
+   read -p "$*"
+}
+
 dbg_msg "source common_func.sh"
